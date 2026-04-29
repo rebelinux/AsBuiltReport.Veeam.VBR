@@ -43,6 +43,11 @@ function Invoke-AsBuiltReport.Veeam.VBR {
     $script:InfoLevel = $ReportConfig.InfoLevel
     $script:Options = $ReportConfig.Options
 
+    # Reset anonymization cache so each report run starts with a clean mapping
+    $script:AnonymizedNamesCache = $null
+    $script:AnonymizedHostCounter = 0
+    $script:AnonymizedIPCounter = 0
+
     # Check the version of the dependency modules
     if ($Options.UpdateCheck) {
         Write-ReportModuleInfo -ModuleName 'Veeam.VBR'

@@ -24,9 +24,9 @@ function ConvertTo-HashToYN {
     $result = [ordered] @{}
     foreach ($i in $TEXT.GetEnumerator()) {
         try {
-            $result.add($i.Key, (ConvertTo-TextYN $i.Value))
+            $result.add($i.Key, (Get-AbrVbrAnonymizedName (ConvertTo-TextYN $i.Value)))
         } catch {
-            $result.add($i.Key, ($i.Value))
+            $result.add($i.Key, (Get-AbrVbrAnonymizedName $i.Value))
         }
     }
     if ($result) {
