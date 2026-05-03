@@ -5,7 +5,7 @@ function ConvertTo-HashToYN {
     .DESCRIPTION
 
     .NOTES
-        Version:        0.2.0
+        Version:        1.0.2
         Author:         Jonathan Colon
 
     .EXAMPLE
@@ -26,7 +26,7 @@ function ConvertTo-HashToYN {
         try {
             $result.add($i.Key, (Get-AbrVbrAnonymizedName (ConvertTo-TextYN $i.Value)))
         } catch {
-            $result.add($i.Key, (Get-AbrVbrAnonymizedName $i.Value))
+            $result.add($i.Key, ($i.Value))
         }
     }
     if ($result) {
