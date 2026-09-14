@@ -7,7 +7,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ##### This project is community maintained and has no sponsorship from Veeam, its employees or any of its affiliates.
 
-## [1.0.7] - Unreleased
+## [1.0.7] - 2026-09-14
 
 ### :arrows_clockwise: Changed
 
@@ -20,6 +20,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Fix [#268](https://github.com/AsBuiltReport/AsBuiltReport.Veeam.VBR/issues/268)
 - Fix [#275](https://github.com/AsBuiltReport/AsBuiltReport.Veeam.VBR/issues/275)
 - Fix diagram regex to properly filter PSGraph hidden node bug
+- Fix bug in the Infrastructure diagram where standalone vSphere/Hyper-V hosts were not displayed correctly when using an IP instead of the FQDN as the host name
+- Fix CodeQL 255
 
 ## [1.0.6] - 2026-07-15
 

@@ -5,7 +5,7 @@ function Get-AbrBackupProxyInfo {
     .DESCRIPTION
         Build a diagram of the configuration of Veeam VBR in PDF/PNG/SVG formats using Psgraph.
     .NOTES
-        Version:        1.0.3
+        Version:        1.0.10
         Author:         AsBuiltReport Organization
         Twitter:        @asbuiltreport
         Github:         asbuiltreport
@@ -19,7 +19,7 @@ function Get-AbrBackupProxyInfo {
     param
     (
         # Backup Proxy Type
-        [ValidateSet('vmware', 'hyperv', 'nas', 'proxy')]
+        [ValidateSet('vmware', 'hyperv', 'nas', 'cdp')]
         [string] $Type
 
     )
@@ -63,7 +63,7 @@ function Get-AbrBackupProxyInfo {
                                 $true { 'Enabled' }
                             }
                         }
-                        'proxy' {
+                        'cdp' {
                             switch ($BackupProxy.IsEnabled) {
                                 $false { 'Disabled' }
                                 $true { 'Enabled' }
@@ -89,7 +89,7 @@ function Get-AbrBackupProxyInfo {
                             'vmware' { $BackupProxy.MaxTasksCount }
                             'hyperv' { $BackupProxy.MaxTasksCount }
                             'nas' { $BackupProxy.ConcurrentTaskNumber }
-                            'proxy' { 1 }
+                            'cdp' { 1 }
                         }
                     }
 
