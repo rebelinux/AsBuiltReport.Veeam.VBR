@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ##### This project is community maintained and has no sponsorship from Veeam, its employees or any of its affiliates.
 
+## [1.0.7] - Unreleased
+
+### :arrows_clockwise: Fixed
+
+- Fix bug in the vSphereProxy diagram where standalone vSphere/Hyper-V hosts were not displayed correctly when using an IP instead of the FQDN as the host name
+
 ## [1.0.7] - 2026-09-14
 
 ### :arrows_clockwise: Changed
