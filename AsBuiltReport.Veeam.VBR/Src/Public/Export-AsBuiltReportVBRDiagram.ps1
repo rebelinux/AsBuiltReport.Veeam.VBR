@@ -259,18 +259,18 @@ function Export-AsBuiltReportVBRDiagram {
         # Build the $script:Options object that Get-AbrVbrDiagrammer reads.
         # This mirrors the structure of AsBuiltReport.Veeam.VBR.json Options section.
         $script:Options = [PSCustomObject]@{
-            DiagramTheme           = $DiagramTheme
-            DiagramColumnSize      = $ColumnSize
-            DiagramWaterMark       = $WaterMarkText
-            NewIcons               = $NewIcons.IsPresent
-            EnableDiagramDebug     = $EnableDiagramDebug.IsPresent
-            IsLocalServer          = $IsLocalServer.IsPresent
-            UpdateCheck            = $false
+            DiagramTheme = $DiagramTheme
+            DiagramColumnSize = $ColumnSize
+            DiagramWaterMark = $WaterMarkText
+            NewIcons = $NewIcons.IsPresent
+            EnableDiagramDebug = $EnableDiagramDebug.IsPresent
+            IsLocalServer = $IsLocalServer.IsPresent
+            UpdateCheck = $false
             EnableDiagramSignature = $Signature.IsPresent
-            SignatureAuthorName    = $AuthorName
-            SignatureCompanyName   = $CompanyName
-            ExportDiagramsFormat   = $Format
-            BackupServerPort       = $Port
+            SignatureAuthorName = $AuthorName
+            SignatureCompanyName = $CompanyName
+            ExportDiagramsFormat = $Format
+            BackupServerPort = $Port
         }
     }
 

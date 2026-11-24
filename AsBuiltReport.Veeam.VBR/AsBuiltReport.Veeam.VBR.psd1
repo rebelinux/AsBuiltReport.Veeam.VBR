@@ -12,7 +12,7 @@
     RootModule = 'AsBuiltReport.Veeam.VBR.psm1'
 
     # Version number of this module.
-    ModuleVersion = '1.0.8'
+    ModuleVersion = '1.0.9'
 
     # Supported PSEditions
     CompatiblePSEditions = @('Desktop', 'Core')
@@ -55,15 +55,15 @@
     RequiredModules = @(
         @{
             ModuleName = 'AsBuiltReport.Core';
-            ModuleVersion = '1.6.4'
+            ModuleVersion = '1.6.5'
         }
         @{
             ModuleName = 'AsBuiltReport.Chart';
-            ModuleVersion = '0.3.4'
+            ModuleVersion = '0.3.5'
         }
         @{
             ModuleName = 'AsBuiltReport.Diagram';
-            ModuleVersion = '1.0.12'
+            ModuleVersion = '1.0.14'
         }
     )
 

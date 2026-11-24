@@ -42,7 +42,7 @@ function Start-AsBuiltReportVBR {
     }
 
     $gliderMod = Get-Module -ListAvailable -Name GliderUI |
-    Sort-Object Version -Descending | 
+    Sort-Object Version -Descending |
     Select-Object -First 1
 
     if ($null -eq $gliderMod -or $gliderMod.Version -lt $requiredGliderUIVersion) {
