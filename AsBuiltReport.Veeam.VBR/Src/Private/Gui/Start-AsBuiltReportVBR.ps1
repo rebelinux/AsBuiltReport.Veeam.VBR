@@ -17,7 +17,7 @@ function Start-AsBuiltReportVBR {
     .NOTES
         Requirements:
             PowerShell 7.4+                       — to run this script
-            GliderUI 0.2.0+  (auto-installed on first run) — Install-PSResource -Name GliderUI -Version 0.2.0 -Scope CurrentUser -TrustRepository
+            GliderUI 0.5.0+  (auto-installed on first run) — Install-PSResource -Name GliderUI -Version 0.5.0 -Scope CurrentUser -TrustRepository
             AsBuiltReport.Core                    — Install-PSResource -Name AsBuiltReport.Core
             AsBuiltReport.Veeam.VBR               — Install-PSResource -Name AsBuiltReport.Veeam.VBR
             Veeam B&R console / PS module         — must be installed on this machine
@@ -34,7 +34,7 @@ function Start-AsBuiltReportVBR {
     }
 
     # ── Bootstrap GliderUI ──────────────────────────────────────────────────────
-    $requiredGliderUIVersion = [version]'0.4.1'
+    $requiredGliderUIVersion = [version]'0.5.0'
 
     if (-not (Get-Module -ListAvailable -Name GliderUI)) {
         Write-Host 'GliderUI not found — installing from PSGallery…' -ForegroundColor Cyan
